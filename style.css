@@ -138,9 +138,11 @@ main {
 
 .card .card_header {
 	font-size: 20px;
+	padding: 20px;
 	color: white;
 	text-transform: uppercase;
 	margin-top: 70px;
+	text-align: center;
 }
 
 .card img {
@@ -159,6 +161,10 @@ main {
 	transform: scale(1.05);	
 	opacity: 1;
 }
+
+
+
+
 
 
 .footer {
