@@ -153,6 +153,15 @@ main {
 	font-weight: 600;
 }
 
+.area-cards .area-cards_header .pdf {
+	color: white;
+}
+
+.area-cards .area-cards_header .pdf:hover {
+	color: white;
+	text-decoration: underline;
+}
+
 .area-cards .area-cards_content { 
 	display: flex;
 	flex-wrap: wrap;
