@@ -173,7 +173,7 @@ main {
 	position: relative;
 	display: flex;
 	justify-content: center;
-	align-items: flex-end;
+	align-items: center;
 	width: 250px;
 	height: 250px;	
 	margin: 10px;
@@ -217,7 +217,6 @@ main {
 	text-align: center;
 	z-index: 1;
 	width: 160px;
-	margin-bottom: 55px;
 }
 
 .card .card_header {
