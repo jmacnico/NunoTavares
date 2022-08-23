@@ -2,6 +2,7 @@ body, a, ul, li{
 	padding: 0;
 	margin: 0;
 	position: relative;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
 body{
@@ -59,7 +60,7 @@ a {
 }
 
 .header-content .nav li{
-	padding: 5px;
+	padding: 5px 10px;
 	cursor: pointer;
 }
 
@@ -68,6 +69,8 @@ a {
 	font-weight: 700;
 	font-size: 20px;
 	color: white;
+	text-align: center;
+	display: block;
 }
 
 .header-content .nav li::after{
@@ -88,51 +91,112 @@ a {
 
 
 main {
-	display: flex;
-	justify-content: space-around;
-	padding-bottom: 150px;
-
+	padding-bottom: 80px;
 }
+.description {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	font-size: 24px;
+	margin: 50px 20px 0;
+	text-align: center;
+}
+
 
 .catalog {
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	background-color: #eee;
+	margin: 35px 0 10px;
+	padding: 0px 30px;
 }
 
 .catalog .catalog_header {
 	font-size: 20px;
 	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	text-transform: uppercase;
-	margin: 50px;
+	margin: 10px 0 10px 10px;
+	text-align: left;
 }
 
 .catalog_content {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
 }
+
+.area-cards {	
+	border-radius: 20px;
+	text-align: center;	
+	margin-bottom: 10px;
+	max-width: 80%;
+}
+
+.area-cards.stone-working {
+	background-image: url('./images/fond_header_pierre.jpg');
+}
+
+.area-cards.construction {
+	background-image: url('./images/header_background.png');
+}
+.area-cards.industrial-needs {
+	
+	background-image: url('./images/fond_header_industrie.jpg');
+}
+
+
+.area-cards .area-cards_header { 
+	color: white;
+	text-transform: uppercase;
+	margin-top: 20px;
+	font-weight: 600;
+}
+
+.area-cards .area-cards_content { 
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
 
 .card {
 	position: relative;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
+	justify-content: center;
+	align-items: flex-end;
+	width: 250px;
+	height: 250px;	
+	margin: 10px;
+}
+
+.card .bg-image {
+	position: absolute;
+	top: 0;
+	left: 0;
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: contain;
-	width: 300px;
-	height: 300px;
-}
-
-.card.stone-working{
-	background-image: url('./images/stoneWorking.png');
+	filter: blur(1px);
+	width: 250px;
+	height: 250px;	
 	
 }
 
-.card.construction{
+.card.hand-tools .bg-image{	
+	background-image: url('./images/HandTools.png');
+}
+
+.card.harmer-pneumatic .bg-image{
+	background-image: url('./images/PneumaticHammers.png');
+	
+}
+
+.card.construction .bg-image{
 	background-image: url('./images/construction.png');
 }
 
-.card.industrial{
+.card.industrial .bg-image{
 	background-image: url('./images/industrial.png');
 }
 
@@ -141,23 +205,30 @@ main {
 	padding: 20px;
 	color: white;
 	text-transform: uppercase;
-	margin-top: 70px;
 	text-align: center;
+	z-index: 1;
+	width: 160px;
+	margin-bottom: 55px;
 }
+
+.card .card_header {
+	background-color: #F5DDB7AA;
+	color: #5c4a31;	
+}
+
 
 .card img {
 	position: absolute;
-	width: 270px;
-	height: 300px;
+	width: 225px;
+	height: 250px;
 	transform: scale(0.25);
 	opacity: 0;
 	transition: all 500ms ease;
 }
 
+
 .card:hover img {
 	position: absolute;
-	width: 270px;
-	height: 300px;
 	transform: scale(1.05);	
 	opacity: 1;
 }
@@ -168,23 +239,51 @@ main {
 
 
 .footer {
-	background-color: #173761;
-	height: 75px;
+	background-image: url('./images/header_background.png');
+	height: 90px;
 	position: fixed;
 	left: 0;
 	bottom: 0;
 	right: 0;
 	color:white;
+	z-index: 1000;
 	
 }
+
+
 
 .footer_content {
 	display: flex;
 	justify-content: center;
-	
+	padding: 10px;
 }
+
 
 
 .footer_content .footer_section {
 	margin: 0 50px;
+}
+
+.footer_content .footer_section .footer_section-header {
+	border-bottom: 1px solid #FFF;
+	font-size: 20px;
+}
+
+.footer_section-content{
+	margin-top: 5px;
+}
+
+.footer_content .footer_section .footer_section-content .label {
+	font-weight: 600;
+}
+
+
+@media (max-width: 600px) {
+	main {
+		padding-bottom: 10px;
+	}
+	
+	.footer {
+	position: relative;
+	}
 }
